@@ -46,7 +46,7 @@ const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const Projects = () => {
   return (
-    <section className="py-24 px-6 md:px-24 text-white">
+    <section id="project" className="py-24 px-6 md:px-24 text-white">
       <motion.div
         initial="hidden"
         whileInView="visible"

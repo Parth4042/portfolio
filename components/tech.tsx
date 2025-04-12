@@ -52,7 +52,15 @@ const FloatingTechIcons = () => {
   const sectionY = useTransform(scrollYProgress, [0, 0.6], [50, 0]);
 
   return (
-    <section ref={ref} className="relative h-[100vh] w-full overflow-hidden text-white px-4 mb-7">
+    <motion.section
+      ref={ref}
+      id="tech"
+      className="relative h-[100vh] w-full overflow-hidden text-white px-4 mb-7"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
       <motion.h2
         style={{ opacity: sectionOpacity, y: sectionY }}
         transition={{ type: 'spring', stiffness: 60, damping: 20 }}
@@ -81,7 +89,7 @@ const FloatingTechIcons = () => {
           </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
